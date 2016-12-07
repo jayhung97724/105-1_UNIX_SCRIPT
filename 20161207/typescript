@@ -1,0 +1,48 @@
+命令稿啟動於 2016年12月07日 (週三) 14時28分03秒
+]0;student@VirtualBox: ~student@VirtualBox:~$ ptree -a student[6P3276s[Ktree bash[K davis-a davissudo apt-get install adacontrol[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Pptree -a davis[3Pdavis[K bashs[Ktree 3276-a student[Kbash sv[Kcript 
+三 12月  7 14:28:13 CST 2016
+student  :0           2016-12-07 14:24 (:0)
+student  pts/4        2016-12-07 14:24 (:0)
+]0;student@VirtualBox: ~student@VirtualBox:~$ bash script ptree -a student[4Pbash script 
+三 12月  7 14:29:54 CST 2016
+student  :0           2016-12-07 14:24 (:0)
+student  pts/4        2016-12-07 14:24 (:0)
+]0;student@VirtualBox: ~student@VirtualBox:~$ name=YoYo
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo $name
+YoYo
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo $name[1Pname=YoYo[1PYoYo+YoYo=YoYo[1PoYo[1PYo[1Po[Khandsome[C"handsome[C[C[C[C[C[C[C[C"[C handsome"ihandsome"shandsome" handsome"[C[C[C[C[C[C[C[C!"
+]0;student@VirtualBox: ~student@VirtualBox:~$ name+=" is handsome!"[11Pecho $name
+YoYo is handsome!
+]0;student@VirtualBox: ~student@VirtualBox:~$ ls
+[0m[01;34ma[0m       b.data  foo.paths  [01;32mscript[0m  [01;34mtmp[0m         [01;34m下載[0m  [01;34m圖片[0m  [01;34m文件[0m  [01;34m模板[0m
+a.data  [01;34md11[0m     [01;34mlab[0m        [01;34mstmp[0m    typescript  [01;34m公共[0m  [01;34m影片[0m  [01;34m桌面[0m  [01;34m音樂[0m
+]0;student@VirtualBox: ~student@VirtualBox:~$ fucka=a*
+]0;student@VirtualBox: ~student@VirtualBox:~$ echi [K[Ko $name
+YoYo is handsome!
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo $name[K[K[K[K[K[K fucka
+fucka
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo fucka$fucka
+a a.data
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo $fucka[C'$fucka[C[C[C[C[C[C'
+$fucka
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo '$fucka'[K"[1P$fucka"'$fucka"
+> ^C
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo '$fucka"[1P$fucka""$fucka"
+a*
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo "$fucka"[K'[1P$fucka''$fucka'
+$fucka
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo '$fucka'[K[C[1P$fucka\$fucka
+$fucka
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo ''l's'
+ls
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo 'ls'[C[1P'[1P'[K[K`ls`
+a a.data b.data d11 foo.paths lab script stmp tmp typescript 下載 公共 圖片 影片 文件 桌面 模板 音樂
+]0;student@VirtualBox: ~student@VirtualBox:~$ command=pwd
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo ""T"h"e" "v"a"l"u"e" "o"f" "c"o"m"m"a"n"f"[1P"d" "i"s" ":"[1P"[1P":" "$"c"o"m"m"a"n"d"
+The value of command is: pwd
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo "The value of command is: $command"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommand=pwd[K`pwd[C[C[C`
+]0;student@VirtualBox: ~student@VirtualBox:~$ command=`pwd`echo "The value of command is: $command"
+The value of command is: /home/student
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo "The value of command is: $command"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommand=`pwd`[K[1P`[1P`[1P`d`a`t`e`[C
+]0;student@VirtualBox: ~student@VirtualBox:~$ echo[K[K[K[Kcommand
+]0;student@VirtualBox: ~student@VirtualBox:~$ command=`date`echo "The value of command is: $command"[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P

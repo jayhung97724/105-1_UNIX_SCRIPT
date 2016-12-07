@@ -1,0 +1,7 @@
+#!/bin/bash
+echo 
+echo "Original name is: $name"
+name="YoYo Ultra"
+echo 
+echo "Name changed in the sub scriprt: $name"
+exit 0

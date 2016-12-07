@@ -1,0 +1,7 @@
+#!/bin/bash
+#read args
+echo "The args are: $@."
+shift 2
+echo "The args are: $@."
+exit 0
+

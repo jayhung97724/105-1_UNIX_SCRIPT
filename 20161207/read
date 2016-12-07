@@ -1,0 +1,10 @@
+#!/bin/bash
+echo -e "Enter something: \c"
+read line
+echo "You typed: $line"
+echo -e "Enter something else: \c"
+read word1 word2 word3
+echo "1st word: $word1"
+echo "2nd word: $word2"
+echo "The rest: $word3"
+

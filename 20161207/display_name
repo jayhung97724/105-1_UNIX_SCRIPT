@@ -1,0 +1,2 @@
+echo "\nIn other script:"
+echo $name

@@ -1,0 +1,6 @@
+#!/bin/sh
+name="YoYo Expo"
+export name
+./display_change_name
+./display_name
+exit 0
