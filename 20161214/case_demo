@@ -1,0 +1,18 @@
+#!/bin/bash
+echo -e "d: for date\nl: to list\nw: to see who\nq: to quit\n"
+echo "What the fuck do you want: "
+read option
+case "$option" in
+	d|D)  date
+	    	;;
+	l|L)  ls
+		;;
+	w|W)  who
+		;;
+	q|Q)  exit 0
+		;;
+	*)    echo "Try run the program again."
+	      exit 1
+		;;
+esac
+exit 0

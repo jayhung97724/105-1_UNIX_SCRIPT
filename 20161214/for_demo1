@@ -1,0 +1,6 @@
+#!/bin/bash
+for people in Jay Grace HuaHua
+do 
+  echo "$people"
+done
+exit 0
