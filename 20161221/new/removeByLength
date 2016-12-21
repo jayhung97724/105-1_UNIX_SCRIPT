@@ -1,0 +1,55 @@
+#!/bin/bash
+
+if [ $# -gt 1 ]
+  then
+    echo "Usage: $0 [directory]"
+    exit 1
+   elif [ $# -eq 1 ]
+   then
+      argument="$1"
+     else
+       argument="."
+fi
+if [ -f "$argument" ]
+  then
+    echo "Usage:$0 [directory]"
+    exit 1
+   elif [ -d "$argument" ]
+   then
+     directory="$argument"
+     files=`ls "$directory" | wc -w`
+     if [ "$files" -eq 0 ]
+     	then
+	  echo "The $directory is empty."
+	  exit 0
+     fi
+     count=0
+     echo "The names of zero length files in $directory are:"
+     set - `ls "$directory"`
+     for files
+     do
+       if [ -d "$directory/$files" ]
+         then
+	   count=`expr $count + 1`
+	   set - `ls "$directory"`
+	   shift "$count"
+	  else
+	    set - `ls -l "$directory/$files"`
+	    if [ "$5" -eq 0 ]
+	      then
+	        echo "$files"
+		rm -f "$directory/$files"
+		set `ls "$directory"`
+		shift "$count"
+	       else
+	         count=`expr $count + 1`
+		 set - `ls "$directory"`
+		 shift "$count"
+	     fi
+	 fi
+      done
+    else
+      echo "$1 does not exist."
+      exit 1
+fi
+

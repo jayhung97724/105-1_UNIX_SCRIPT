@@ -1,0 +1,49 @@
+#!/bin/bash
+
+while [ 1 ]
+do
+  echo " Use one of the following options: "
+  echo " a or A: Invoke shell script for read_demo"
+  echo " b or B: Display whether a file is a "simple" file of a "directory""
+  echo " c or C: Create a backup for a file"
+  echo " d or D: Start a telnet session"
+  echo " e or E: Start an ftp session"
+  echo " x or X: Exit"
+  echo -e "Enter your option and hit <Enter>: \c"
+  read option
+  case "$option" in
+        a|A)    ./read_demo
+                ;;
+        b|B)    echo -e " Please enter your file name :\c"
+                read filename
+                if test -d $filename
+                        then
+                                echo "$filename is a directory file"
+                fi
+                if test -f $filename
+                        then
+                                echo "$filename is a simple file"
+                fi
+                ;;
+        c|C)    echo -e " Please enter the name of file you want to backup  :\c"
+                read backupFile
+                echo -e " Please enter the backup file's name :\c"
+                read backupName
+                cp $backupFile $backupName
+                ;;
+	d|D)	echo -e "Please enter the IP address :\c"
+		read address
+		telnet address
+		;;
+	e|E)	echo -e "Please enter thoe IP address :\c"
+		read address
+		ftp address
+		;;
+        x|X) exit 0
+                ;;
+        *)      echo "Invalid option; try running the program again."
+                exit 1
+                ;;
+  esac
+done
+exit 0

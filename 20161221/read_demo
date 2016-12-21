@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Enter input: \c"
+read line
+echo "You entered: $line"
+read word1 word2 word3
+echo "first: $word1"
+echo "second: $word2"
+echo "rest: $word3"
+exit 0
+
