@@ -1,0 +1,21 @@
+#!/bin/bash
+if [ $# != 1 ]
+    then 
+	echo "Usage: $0 integer-argument"
+	exit 1
+fi
+
+num=$1
+echo "First $num numbers of Fibonacci series:"
+num0=0
+num1=1
+cur=1
+for (( i=0; i<=`expr $num`; i=i+1 ))
+do
+  echo -e "`expr $cur` \c"
+  cur=`expr $num0 + $num1`
+  num0=$num1
+  num1=$cur
+done
+echo 
+exit 0

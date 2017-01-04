@@ -1,0 +1,25 @@
+#!/bin/bash
+menu()
+{
+    echo -e "Enter your option: \c"
+    read option
+    case "$option" in
+	d|D) date
+	     ;;
+	f|F) echo -e "Enter the address: \c" 
+	     read add
+   	     ftp add
+	     ;;
+	t|T) echo -e "Enter the address: \c" 
+	     read add
+   	     telnet add
+	     ;;
+	q|Q) exit 0
+	     ;;
+	*)   echo "Invalid option"
+	     exit 1
+	     ;;
+    esac
+}
+menu
+exit 0

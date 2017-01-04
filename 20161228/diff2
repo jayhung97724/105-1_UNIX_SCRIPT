@@ -1,0 +1,54 @@
+#!/bin/bash
+
+if [ $# != 2 ] 
+    then
+        echo "Usage: $0 file1 file2"
+	exit 1
+    elif [ ! -f "$1" ]
+    then
+	echo "$1 is not an ordinary file"
+	exit 1
+    elif [ ! -f "$2" ] 
+    then
+        echo "$1 is not an ordinary file"
+        exit 1
+    else
+fi
+
+file1=$1
+file2=$2
+
+exec 3 < "$file1"
+exec 4 < "$file2"
+
+while read line1 0<&3
+do
+    if read line2 0<&4
+    then 
+	if [ "$line1" != "$line2" ]
+	then
+            echo "$1 and $2 are different"
+	    echo "	$1:$file1"
+	    echo "      $2:$file2"
+	    exit 1
+	fi
+    else 
+	echo "$1 and $2 are different and $1 is bigger than $2"
+        exit 1
+
+    fi
+done
+    
+if read line2 0<$4
+  then
+    echo "$1 and $2 are different"
+    exit 1
+  else
+    echo "$1 and $2 are the same!"
+    exit 0
+fi
+exec 3 < &-
+exec 4 < &-
+
+   
+

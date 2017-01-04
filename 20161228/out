@@ -1,0 +1,45 @@
+Time now: Wed Dec 28 15:56:27 CST 2016
+The users lodded on are:student  :0           2016-12-28 13:59 (:0)
+student  pts/0        2016-12-28 15:37 (:0)
+Time now: Wed Dec 28 15:56:27 CST 2016
+The users lodded on are:student  :0           2016-12-28 13:59 (:0)
+student  pts/0        2016-12-28 15:37 (:0)
+data
+data1
+dest
+execdemo1
+fibonaci
+file1
+file2
+file3
+file4
+out
+sample
+data
+data1
+dest
+execdemo1
+fibonaci
+file1
+file2
+file3
+file4
+out
+sample
+  PID TTY          TIME CMD
+ 3200 pts/0    00:00:00 bash
+ 3263 pts/0    00:00:00 ps
+  PID TTY          TIME CMD
+ 3200 pts/0    00:00:00 bash
+ 3264 pts/0    00:00:00 ps
+data
+data1
+dest
+execdemo1
+fibonaci
+file1
+file2
+file3
+file4
+out
+sample

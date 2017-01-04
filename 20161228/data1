@@ -1,0 +1,5 @@
+echo -e "Time now: \c"
+date
+echo -e "The users lodded on are:\c"
+who
+

@@ -1,0 +1,6 @@
+cat > file1
+exec < file2
+cat file3
+exec < /dev/tty
+cat > file4
+

@@ -1,0 +1,20 @@
+#!/bin/bash
+outputdata()
+{
+    user_input=$1
+    grep "$user_input" << DIRECTORY
+  	John Doe	555.232.0000	johnd@somecollege.com
+
+	Jenny Great	444.6565.1111	jg@new.somecollege.edu
+
+DIRECTORY
+echo
+}
+if [ $# = 0 ]
+  then
+    echo "Usage: $0 name"
+    exit 1
+fi
+
+outputdata
+exit 0
