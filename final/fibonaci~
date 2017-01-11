@@ -3,20 +3,22 @@ if [ $# != 1 ]
     then 
 	echo "Usage: $0 integer-argument"
 	exit 1
-    elif [ $1 -le 0 ]
+    elif [ `expr $1 \% 1 != 0` ]
+    then
+	echo "Only positive integer greater than 2 is accepted."
+	exit 1
+    elif [ $1 -le 1 ]
     then
         echo "Only positive integer greater than 2 is accepted."
 	exit 1
-    
 fi
-
 num=$1
 #echo "First $num numbers of Fibonacci series:"
 num0=0
 num1=1
 cur=1
-echo -e "`expr $num0 $num1` \c"
-for (( i=0; i<`expr $num - 1`; i=i+1 ))
+echo -e "$num0 $num1 \c"
+for (( i=0; i < `expr $num - 1`; i=i+1 ))
 do
   cur=`expr $num0 + $num1`
   echo -e "`expr $cur` \c"

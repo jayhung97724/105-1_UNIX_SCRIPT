@@ -1,0 +1,33 @@
+#!/bin/sh
+if [ $# != 1 ]
+	then
+	echo "Need one directory as a command line argument!!"
+	exit 1
+fi
+if [ -d $1 ]
+ then
+	ordinary=`find $1 -type f |wc -l`
+	link=`find $1 -type l |wc -l`
+	dir=`find $1 -type d |wc -l`
+	printf "%-10s %-10s %-10s\n" ordinary link directory
+	printf "%-10s %-10s %-10s\n" $ordinary $link $dir
+	#Find max Files
+	max=0
+	for path in `find $1 -type f`
+	do
+		temp=`wc -c $path|cut -d ' ' -f 1`
+		if [ $temp -gt $max ]
+			then
+			max=$temp
+		fi
+	done
+	for path in `find $1 -type f -size $max'c'`
+	do
+		#echo $path
+		filename=`basename $path`
+		ln -s $path /home/$USER/桌面/$filename 2>>/dev/null
+	done
+else
+	echo "The argument is not a directory!!"
+	exit 0
+fi 

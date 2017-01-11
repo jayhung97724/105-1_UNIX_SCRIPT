@@ -1,0 +1,35 @@
+#!/bin/sh
+Fibonacci ()
+{
+	if [ $1 -eq 0 ]
+		then
+		echo 0
+	elif [ $1 -eq 1 ]
+		then
+		echo 1
+	else
+		 echo $(( $(Fibonacci $(($1 - 1))) + $(Fibonacci $(($1 - 2)))))
+		 
+	fi
+}
+if [ $# != 1 ]
+	then
+	echo "Need one integer as a command line argument!!"
+	exit 0
+else
+	if [ $1 -ge 0 ] 2>>/dev/null
+		then
+		i=0
+		echo "Fi\tvalue" >> ~/final/Output
+		while [ "$i" -le $1 ]
+		do
+			echo "$i\t" $(Fibonacci $i) >> ~/final/Output
+			i=$(($i + 1))
+		done
+	else 
+		echo "Not a positive integer!!"
+		exit 0
+	fi
+	
+fi
+

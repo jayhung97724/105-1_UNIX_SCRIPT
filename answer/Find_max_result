@@ -1,0 +1,14 @@
+sh Find_max ~/final/Test
+ordinary   link       directory 
+10         5          3
+Output Score5 to desktop
+
+sh Find_max ~/final/Test/Test1
+ordinary   link       directory 
+6          3          2 
+Output Score5 to desktop
+
+sh Find_max ~/final/Test/Test1/Test2
+ordinary   link       directory 
+3          0          1
+Output SameSize SameSize1 SameSize2 to desktop

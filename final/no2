@@ -1,0 +1,41 @@
+#!/bin/bash
+if [ $# -ne 1 ]
+then 
+	echo "Only one argument and must be a directory"
+	exit 1
+
+	elif [ -f $1 ]
+	then
+		echo "Only one argument and must be a directory"
+		exit 1
+fi
+dir=$1
+d=0
+l=0
+f=0
+set - `ls $dir`
+for files
+do
+    if [ -d "$dir/$files" ]
+	then 
+ 	    d=`expr $d + 1`
+    elif [ -L "$dir/$files" ]
+	then
+		l=`expr $l + 1`
+	else
+		f=`expr $f + 1`
+	fi
+done
+echo -e "l files: $l d files: $d - files: $f"
+set - `ls -l $dir | sort -r`
+shift 1
+size=$6
+#echo $size
+set -e `find $dir/ -type f -size $size'c'`
+for maxfiles
+do
+	set -e `basename $maxfiles`
+	name=$1
+	ln -s $maxfiles ~/桌面/$name.soft 
+done
+exit 0
